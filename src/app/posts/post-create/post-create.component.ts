@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import {MatDialog} from '@angular/material/dialog';
 
 import { PostsService } from '../posts.service';
+import { DialogTestComponent } from '../dialog-test/dialog-test.component';
 
 @Component({
   selector: 'app-post-create',
@@ -9,10 +11,13 @@ import { PostsService } from '../posts.service';
   styleUrls: ['./post-create.component.scss']
 })
 export class PostCreateComponent {
-  enteredTitle = '';
-  enteredContent = '';
+  animal: string;
+  name: string;
 
-  constructor(public postsService: PostsService) {}
+  constructor(
+    public postsService: PostsService,
+    public dialog: MatDialog
+  ) {}
 
   onAddPost(form: NgForm) {
     if (form.invalid) {
@@ -20,5 +25,13 @@ export class PostCreateComponent {
     }
     this.postsService.addPost(form.value.title, form.value.content);
     form.resetForm();
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogTestComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }
