@@ -1,0 +1,24 @@
+:host {
+  color: #ffffff;
+  background: #00000099;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  min-width: 200px;
+  text-align: center;
+  animation: move .2s both;
+}
+p{
+  margin: 0;
+}
+
+@keyframes move {
+  from {
+    transform: scale(0.6);
+    opacity: .5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import {MatDialog} from '@angular/material/dialog';
 
 import { PostsService } from '../posts.service';
+import { MessageService } from '../../services/message.service';
 import { DialogTestComponent } from '../dialog-test/dialog-test.component';
 
 @Component({
@@ -16,7 +17,8 @@ export class PostCreateComponent {
 
   constructor(
     public postsService: PostsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private messageSer: MessageService,
   ) {}
 
   onAddPost(form: NgForm) {
@@ -33,5 +35,9 @@ export class PostCreateComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  testttt() {
+    this.messageSer.notify('资料加载中，请稍候..');
   }
 }

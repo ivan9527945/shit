@@ -1,0 +1,13 @@
+<app-card class="m-auto confirm">
+  <app-card-header>{{title}}</app-card-header>
+  <app-card-body *ngIf="!textAsHtml" class="overflow-auto">
+    {{text}}
+  </app-card-body>
+  <app-card-body *ngIf="textAsHtml" class="overflow-auto">
+  <!-- <app-card-body *ngIf="textAsHtml" class="overflow-auto" [innerHtml]="text | safeHtml"> -->
+  </app-card-body>
+  <app-card-footer>
+    <button class="app-button btn btn--popup-confirm px-3" (click)="yes()">{{btnConfirmTitle}}</button>&nbsp;
+    <button class="app-button btn btn--popup-cancel px-3" (click)="no()">{{btnCloseTitle}}</button>
+  </app-card-footer>
+</app-card>

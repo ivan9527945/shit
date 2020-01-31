@@ -1,0 +1,12 @@
+<app-card class="m-auto" style="width: 350px">
+  <app-card-header>{{title}}</app-card-header>
+  <app-card-body *ngIf="!textAsHtml">
+    {{text}}
+  </app-card-body>
+  <app-card-body *ngIf="textAsHtml">
+  <!-- <app-card-body *ngIf="textAsHtml" [innerHtml]="text | safeHtml"> -->
+  </app-card-body>
+  <app-card-footer>
+    <button class="app-button btn btn--popup-cancel px-3" (click)="close()">{{btnCloseTitle}}</button>
+  </app-card-footer>
+</app-card>

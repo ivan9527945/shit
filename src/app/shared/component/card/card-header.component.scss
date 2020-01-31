@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  color: #fff;
+  border-bottom: 1px solid #eee;
+  ::ng-deep i {
+    font-size: 1.3rem;
+    color: #333;
+    cursor: pointer;
+  }
+}
