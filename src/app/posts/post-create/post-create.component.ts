@@ -4,7 +4,9 @@ import {MatDialog} from '@angular/material/dialog';
 
 import { PostsService } from '../posts.service';
 import { MessageService } from '../../services/message.service';
+import { ModalService } from '../../services/modal.service';
 import { DialogTestComponent } from '../dialog-test/dialog-test.component';
+import { DialogUniqueComponent } from '../dialog-unique/dialog-unique.component';
 
 @Component({
   selector: 'app-post-create',
@@ -19,6 +21,7 @@ export class PostCreateComponent {
     public postsService: PostsService,
     public dialog: MatDialog,
     private messageSer: MessageService,
+    private modalSer: ModalService,
   ) {}
 
   onAddPost(form: NgForm) {
@@ -37,7 +40,16 @@ export class PostCreateComponent {
     });
   }
 
-  testttt() {
+  clickMessage() {
     this.messageSer.notify('资料加载中，请稍候..');
+  }
+
+  clickAlert() {
+    this.modalSer.open(DialogUniqueComponent, {
+      hasBackdrop: true,
+    }, component => {
+      component.title = '昵称设定';
+      // component.updateUserInfo = this.updateUserInfo.bind(this);
+    });
   }
 }

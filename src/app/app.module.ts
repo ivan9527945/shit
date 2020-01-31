@@ -10,6 +10,7 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { DialogTestComponent } from './posts/dialog-test/dialog-test.component';
+import { DialogUniqueComponent } from './posts/dialog-unique/dialog-unique.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DialogTestComponent } from './posts/dialog-test/dialog-test.component';
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
-    DialogTestComponent
+    DialogTestComponent,
+    DialogUniqueComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { DialogTestComponent } from './posts/dialog-test/dialog-test.component';
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    DialogTestComponent
+    DialogTestComponent,
+    DialogUniqueComponent
   ],
 })
 export class AppModule {}
