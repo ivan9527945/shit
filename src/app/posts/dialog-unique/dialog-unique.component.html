@@ -1,10 +1,10 @@
 <app-card class="m-auto">
-  <app-card-header>{{title}}<i class="fas fa-times" (click)="close()"></i></app-card-header>
+  <app-card-header>{{title}}<i class="far fa-times-circle" (click)="close()"></i></app-card-header>
   <app-card-body class="p-4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim unde odit consectetur itaque ipsam voluptatem non iusto dolores architecto labore!
   </app-card-body>
   <app-card-footer>
-    <button class="app-button btn btn--popup-confirm px-3 mr-3" (click)="alert()">确认</button>
-    <button class="app-button btn btn--popup-cancel px-3" (click)="close()">关闭</button>
+    <button class="btn btn-primary btn-sm mr-3" (click)="alert()">确认</button>
+    <button class="btn btn-secondary btn-sm" (click)="close()">关闭</button>
   </app-card-footer>
 </app-card>
