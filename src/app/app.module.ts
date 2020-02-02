@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './shared/component/material.module';
 import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
@@ -11,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { DialogTestComponent } from './posts/dialog-test/dialog-test.component';
 import { DialogUniqueComponent } from './posts/dialog-unique/dialog-unique.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { DialogUniqueComponent } from './posts/dialog-unique/dialog-unique.compo
     HeaderComponent,
     PostListComponent,
     DialogTestComponent,
-    DialogUniqueComponent
+    DialogUniqueComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
