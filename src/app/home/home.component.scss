@@ -1,3 +1,33 @@
+@font-face {
+  font-family: termina;
+  src: url(./../../assets/fonts/l) format("woff2"),
+      url(./../../assets/fonts/d.woff) format("woff"),
+      url(./../../assets/fonts/a) format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+// 蓋掉套件樣式
+video::-webkit-media-controls{
+  display:none !important;
+}
+.navbar-nav{
+  display: block!important;
+  .nav{
+    &.active{
+      a{
+        color: #ff0100!important;
+      }
+    }
+    a{
+      color:black!important;
+    }
+  }
+}
+
+.body{
+  height: 100%;
+}
 .navigation{
   position: fixed;
   top: 20px;
@@ -15,9 +45,8 @@
     }
   }
 }
-.body{
-  height: 100%;
-}
+
+// 隔線佈局樣式
 .raster-box{
   position: fixed;
   top: 0;
@@ -84,6 +113,7 @@
 .content{
   position: relative;
   height: 100%;
+  overflow:auto;
   .mail-box{
     position: absolute;
     top: calc(8.33333vw + 100px);
@@ -94,6 +124,7 @@
     color: #000;
     font-weight: 600;
     font-size: 20px;
+    background: yellow;
     .brand-color{
       color:red;
     }
@@ -111,23 +142,53 @@
     color:red;
     margin: 0;
     .first{
+      font-family: termina,Helvetica,Arial,sans-serif ;
       margin-top: 5vw;
-      transform: translateY(-100vw) translateX(-59px);
+      transform: translateY(-100vw);
     }
-  }
-}
-
-
-
-.slider-video{
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  iframe{
-    width: 100%;
-    height: 100vh;
   }
 }
 .logo{
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  img{
+    opacity: 0.3;
+  }
+}
+
+.work-box{
+  float: left;
+  position: relative;
+  cursor: pointer;
+  &.work-l{
+    width: 45%;
+  }
+  &.work-m{
+    width: 30%;
+    margin-top: 30vh;
+  }
+  &.work-r{
+    width: 25%;
+    margin-top: 85vh;
+  }
+  &:hover{
+    .work-img{
+      padding: 25px;
+    }
+  }
+  .work-img{
+    position: relative;
+    transition: .3s;
+    img{
+      width: 100%;
+    }
+  }
+  .work-title{
+    font-size: 50px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: termina,Helvetica,Arial,sans-serif ;
+  }
 }

@@ -1,42 +1,74 @@
 <div class="body">
-  <div class="navigation">
-    <div class="nav active">HOME</div>
-    <div class="ml-5 nav">WORK</div>
-    <div class="ml-5 nav">ABOUT</div>
+  <div id="navbar-example" class="navigation" role="navigation">
+    <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+      <ul class="nav navbar-nav">
+        <li class="nav"><a href="#home">HOME</a></li>
+        <li class="nav"><a href="#works">WORKS</a></li>
+        <li class="nav"><a href="#about">ABOUT</a></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="content">
+  <div class="content" data-spy="scroll" data-target="#navbar-example" data-offset="0">
     <a href="javascript:;" class="mail-box">
       cliadasdasd<span class="brand-color">@</span>gmil.com
     </a>
     <div class="main-title">
-      <div class="first">MOTTOMOTTO</div>
+      <div class="first">FERDINAND</div>
       <!-- ZACK.PHOTOGRAPHY -->
     </div>
-    <div class="logo">
-      <img src="./../../assets/image/logo.png" alt="">
-    </div>
-    <!-- <div class="slider-video">
-      <iframe [src]="urlSafe" frameborder="0"></iframe>
-    </div> -->
-    <video class="slider-video">
-      <source src="./../../assets/image/slider.mp4">
-    </video>
-  </div>
 
-  <!-- 隔線框架 -->
-  <div class="raster-box"></div>
-  <div class="raster-bg">
-    <div class="h-raster-v rv1"></div>
-    <div class="h-raster-v rv2"></div>
-    <div class="h-raster-v rv3"></div>
-    <div class="h-raster-v rv4"></div>
-    <div class="h-raster-v rv5"></div>
-    <div class="h-raster-v rv6"></div>
-    <div class="h-raster-v rv7"></div>
-    <div class="h-raster-v rv8"></div>
-    <div class="h-raster-v rv9"></div>
-    <div class="h-raster-v rv10"></div>
-    <div class="h-raster-v rv11"></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C_2dXspJe_Y?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    <!-- <video id="home" width='100%' height="auto" loop="true" autoplay="autoplay" controls controlslist="nodownload">
+      <source src="./../../assets/image/slider.mp4">
+    </video> -->
+
+    <div id="works" style="height: 1500px">
+      <div class="work-box work-l">
+        <div class="work-img">
+          <img src="./../../assets/image/work1.jpg" alt="">
+        </div>
+        <div class="work-title">huf magazine</div>
+      </div>
+      <div class="work-box work-m">
+        <div class="work-img">
+          <img src="./../../assets/image/work2.jpg" alt="">
+        </div>
+        <div class="work-title">huf magazine</div>
+      </div>
+      <div class="work-box work-r">
+        <div class="work-img">
+          <img src="./../../assets/image/work3.jpg" alt="">
+        </div>
+        <div class="work-title">huf magazine</div>
+      </div>
+    </div>
+
+    <div id="about" style="height: 1500px">
+      <h4>ABOUT</h4>
+      <p>Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由 CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software Foundation 的一个项目，因此拥有丰富的开发人员和用户社区。
+      </p>
+    </div>
+
+    <!-- 隔線框架 -->
+    <div class="raster-box">
+      <div class="logo">
+        <img src="./../../assets/image/logo.png" alt="">
+      </div>
+    </div>
+    <div class="raster-bg">
+      <div class="h-raster-v rv1"></div>
+      <div class="h-raster-v rv2"></div>
+      <div class="h-raster-v rv3"></div>
+      <div class="h-raster-v rv4"></div>
+      <div class="h-raster-v rv5"></div>
+      <div class="h-raster-v rv6"></div>
+      <div class="h-raster-v rv7"></div>
+      <div class="h-raster-v rv8"></div>
+      <div class="h-raster-v rv9"></div>
+      <div class="h-raster-v rv10"></div>
+      <div class="h-raster-v rv11"></div>
+    </div>
   </div>
 </div>
